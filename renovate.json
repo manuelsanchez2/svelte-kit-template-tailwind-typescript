@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "dependencyDashboard": true,
+  "schedule": ["before 5am on friday"],
+  "timezone": "Europe/Berlin",
+  "packageRules": [
+    {
+      "description": "Group (minor) Node package updates into single PRs",
+      "groupName": "node",
+      "automerge": true,
+      "matchUpdateTypes": ["minor", "patch", "lockFileMaintenance"],
+      "matchManagers": ["npm"]
+    }
+  ]
+}
